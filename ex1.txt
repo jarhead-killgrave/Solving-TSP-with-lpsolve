@@ -1,0 +1,39 @@
+Nom et Prénom: KITSOUKOU Manne Emile
+Numero Etudiant: 22013393
+Parcours : L2 informatique groupe 2B
+
+Réponses aux questions
+
+Partie1: Modélisation:
+	
+
+
+1-) LEs variables Xij sont des variables binaires. Elles indique si le chemin comporte une connection(un lien) entre la ville i et la ville j. Ainsi une variable Xij prend la valeur 1 si  si la ville a est visitée immédiatement avant la ville b. Sinon, cette variable est mise à 0.
+	
+	
+2-) Pour un chemin donnée,les variables Ui sont associés  à chacune des differentes villes. Elle permet d'identifier l'ordre de parcours des villes. De ce fait l'ordre de parcours est labelisé. Ainsi chaque variable Ui représentee l'ordre dans lequel la ville i est visité dans le cycle.
+
+
+	
+3-) On a au total 4 contraintes distinctes:
+	
+	- La premier contrainte assure que l'on quitte chaque ville une seule fois. C'est à dire chaque ville i est le point de depart d'excatement une(1) connection vers une autre ville.
+	
+	- La deuxieme contrainte vérifie que l'on entre une seule fois dans une ville. En d'autres termes, chaque ville j est le point d'arrivé d'une unique connection provenant d'une autre ville.
+	
+	- La troisieme contrainte permet d'elimer les sous-tours dans une solution. Elle impose que pour un arc(chemin) (i,j) que l'orrdre de parcours de la ville j soit supérieur de 1 à l'ordre de parcours de la ville i. C'est à dire quand Xij = 1 on doit avoir Uj >= Ui + 1
+	
+	- La quatrieme contrainte impose que l'ordre de parcours est comprise entre 0 et n-1. La premiere ville sera toujour la premiere à etre parcours. Entre les autres villes l'ordre de parcour sera alors entre 1 et n-1	
+
+
+5- La fonction objectif consiste à rechercher un cycle, qui contient les n villes, pour lequel le cycle est de longueur minimal. C'est à dire on cherche le chemin le plus court pour visiter chaque arrêt une fois avant de revenir au point de départ. C'est un problème de minimisation.
+
+
+						:::::::::: ::::::::::: ::::    ::: 
+						:+:            :+:     :+:+:   :+: 
+						+:+            +:+     :+:+:+  +:+ 
+						:#::+::#       +#+     +#+ +:+ +#+ 
+						+#+            +#+     +#+  +#+#+# 
+						#+#            #+#     #+#   #+#+# 
+						###        ########### ###    #### 
+						   MEK
